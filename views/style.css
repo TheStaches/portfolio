@@ -17,7 +17,7 @@
 }
 #header hr {
   border-color: #D4AF37;
-  max-width: 25%;
+  max-width: 35%;
   opacity: 0.5;
 }
 #links {
@@ -27,6 +27,13 @@ a {
   fill: #D4AF37;
   padding: 5px;
 }
-#headerBtn {
+#header .btn:hover {
+  background-color: #D4AF37;
+}
+.btn-outline-warning {
+  color: #D4AF37;
+  border-color: #D4AF37;
+}
+#header .btn {
   margin-left: 50px;
 }
