@@ -10,6 +10,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use('/profile', profile);
+app.use(express.static(__dirname + '/views'));
 
 app.set('views', './views');
 app.set('view engine', 'ejs');
@@ -22,7 +23,7 @@ app.get('/', (req, res) => {
       lastName: 'Dodds',
     }
   }
-  res.render('index', data);
+  res.render('home', data);
 });
 
 app.get('/contact', (req, res) => {

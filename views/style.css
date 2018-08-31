@@ -1,0 +1,23 @@
+#background {
+  background-color: #183659;
+}
+
+div {
+  color: #D4AF37;
+}
+
+#header {
+  text-align: center;
+}
+
+#name {
+  font-size: 75px;
+}
+
+hr {
+  color: #D4AF37;
+  max-width: 25%;
+  opacity: 0.5;
+  
+
+}
