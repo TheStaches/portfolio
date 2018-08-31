@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My Personal Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheStaches/portfolio.git"
+  },
+  "author": "Eric Dodds Eric.B.Dodds@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheStaches/portfolio/issues"
+  },
+  "homepage": "https://github.com/TheStaches/portfolio#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0"
+  }
+}
