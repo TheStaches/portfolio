@@ -2,22 +2,32 @@
   <head>
     <title> Contact Eric </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
-    <link rel='stylesheet' href='style.css' />
+    <link rel='stylesheet' href='contact.css' />
   </head>
-  <body>
-    <div>
-      <form action='/thanks' method='POST'>
-        <label for='firstname'>First Name:</label>
-        <input id='firstName' name='firstName' type='text'>
-
-        <label for='lastName'>Last Name:</label>
-        <input id='lastName' name='lastName' type='text'>
-
-        <label for='email'>Email:</label>
-        <input id='email' name='email' type='text'>
-
-        <input type='submit'/>
+  <body id="background">
+    <div class="contact">
+      <div class="container">
+        <h2>What can I do for you?</h2>
+        <!--  method="POST" -->
+      <form action='/thanks'>
+        
+        <div class="form-group name">
+          <label for='name'><span>Name</span></label>
+          <input class="form-control" value="Eric Dodds"id='name' name='name' type='text' autofocus>
+        </div>
+        <div class="form-group email">
+          <label for='email'><span>Email</span></label>
+          <input class="form-control" value="Eric@test.com"id='email' name='email' type='text'>
+        </div>
+        <div class="form-group">
+          <label for="exampleTextarea"><span>Message</span></label>
+          <textarea class="form-control message" id="message"></textarea>
+        </div>
+        
+        <button class="btn btn-lrg btn-outline-warning">Send</button>
+        </div>
       </form>
+    </div>
     </div>
   </body>
 </html>

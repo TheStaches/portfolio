@@ -1,0 +1,35 @@
+#background {
+  background-color: #183659;
+}
+.container {
+  max-width: 750px;
+}
+.name, .email{
+  display: inline-block;
+  width: 49%;
+}
+.email {
+  margin-left: 7px;
+}
+#message {
+  height: 180px;
+}
+h2 {
+  text-align: center;
+  color: #D4AF37;
+  padding-top: 60px;
+  font-size: 85px;
+  font-family: AmericanTypewriter-Light;
+}
+span {
+  color: #D4AF37;
+  font-family: AmericanTypewriter-Light;
+}
+.btn:hover {
+  background-color: #D4AF37;
+}
+.btn {
+  color: #D4AF37;
+  border-color: #D4AF37;
+  width: 150px;
+}

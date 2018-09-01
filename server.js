@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const profile = require('./profile')
+const fs = require('fs');
 
 const app = express();
 const router = express.Router();
@@ -31,7 +32,16 @@ app.get('/contact', (req, res) => {
 })
 
 app.get('/thanks', (req, res) => {
+  console.log(req.body);
   res.render('thanks', { contact: req.body });
+})
+
+app.get('/resume', (req, res) => {
+  let resume = 'views/files/resume'
+  fs.readFile(__dirname + resume, (err,pdf) => {
+    res.contentType("application/pdf");
+    res.send(pdf);
+  })
 })
 
 //  POST
@@ -44,8 +54,6 @@ app.get('*', (req, res) => {
   res.send('Whoops, page not found 404').status(404);
 })
 
-
-router
 
 app.listen(8080, () => {
   console.log('listening at http://localhost:8080');
