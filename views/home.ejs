@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
     <link rel='stylesheet' href='home.css' />
   </head>
-  <body id='background'>
+  <body class="font" id='background'>
       <div id="header">
         <h1>Eric Dodds</h1>
         <p>Full-Stack Developer</p>
@@ -23,61 +23,40 @@
 
       <div id="skills">
         <div class="container">
-          <div class="row spacing">
+          <div class="row">
             <div class="col-6">
               <h2>Hi There! I'm Eric Dodds</h2>
               <p>I am a full stack developer in San Diego, CA. I create beautiful professional websites using best practice accessibility. I enjoy turning complex problems into simple, beautiful and intuitive interface designs.</p>
             </div>
             <div class="col-6">
+              <h2>What I Use</h2>
               <p>Html, CSS</p>
               <p>JavaScript</p>
               <p>node.js, express</p>
               <p>MongoDB</p>
               <p>React</p>
+              <p>Webpack, Less</p>
             </div>
           </div>
       </div>
     </div>
 
-    <div id="projects">
-        <div class="container">
-          <h2 class="spacing">My Projects</h2>
-          <div class="row">
-            <div class="col-4">
-              <div class="card">
-                ONE
-              </div>
-            </div>
-            <div class="col-4">
-              <a href="https://ericdodds-san-diego-meters.herokuapp.com/">
-                <div class="card">
-                    San Diego Meters
-                  </div>
-              </a>
-            </div>
-            <div class="col-4">
-                <div class="card">
-                    ONE
-                  </div>
-            </div>
+    <div class="row" id="projects">
+      <div class="container">
+        <h2 class="projectTitle">Projects</h2>
+        <div class="row projectRow shadow-lg">
+          <div class="col-7 font">
+            <h2 class="projectHeader">San Diego Parking Meters</h2>
+            <h5>React, NodeJS, Express</h5>
+            <p>This is the description of my project. This will span multiple lines</p>
+            <p>Tid bit on the project build and what I used</p>
+            <a href="https://ericdodds-san-diego-meters.herokuapp.com/"><button class="btn btn-lrg btn-outline-warning">Demo</button></a>
+            <a href="https://github.com/TheStaches/San-Diego-Parking-Meter-Locator"><button class="btn btn-lrg btn-outline-warning">Github</button></a>
           </div>
-          <div class="row">
-              <div class="col-4">
-                <div class="card">
-                  ONE
-                </div>
-              </div>
-              <div class="col-4">
-                  <div class="card">
-                      ONE
-                    </div>
-              </div>
-              <div class="col-4">
-                  <div class="card">
-                      ONE
-                    </div>
-              </div>
-            </div>
+          <div class="col-5">
+            <img class="single" src="http://www.jakeshealthsolutions.com/wp-content/uploads/2016/03/cat-150x150.jpg" />
+          </div>
+        </div>
       </div>
     </div>
 

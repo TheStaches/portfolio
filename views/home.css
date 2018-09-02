@@ -1,10 +1,12 @@
 #background {
   background-color: #183659;
 }
-#header {
-  text-align: center;
+.font {
   color: #D4AF37;
   font-family: AmericanTypewriter-Light;
+}
+#header {
+  text-align: center;
   display: block;
   height: 100vh;
   min-height: 700px;
@@ -49,30 +51,32 @@ a {
   font-weight: normal;
   text-align: left;
   font-size: 30px;
-  color: #D4AF37;
-  font-family: AmericanTypewriter-Light;
-}
-.spacing {
-  padding-top: 100px;
 }
 #about {
   text-align: left;
 }
 #skills p {
   font-weight: normal;
-  color: #D4AF37;
-  font-family: AmericanTypewriter-Light;
   text-align: left;
 }
 #projects {
   height: 750px;
 }
-#projects h2{
-  font-weight: normal;
+.projectTitle{
+  padding-top: 100px;
+  padding-bottom:50px;
   text-align: center;
-  font-size: 30px;
-  color: #D4AF37;
-  font-family: AmericanTypewriter-Light;
+}
+.projectHeader{
+  font-weight: normal;
+  padding:5px;
+  font-size: 40px;
+}
+.projectRow {
+  margin-bottom: 6%;
+}
+#projects img {
+  padding: 40px;
 }
 #footer {
   background-color: #0f263f;
@@ -82,8 +86,6 @@ a {
   text-align: center;
   font-size: 20px;
   padding-top: 30px;
-  color: #D4AF37;
-  font-family: AmericanTypewriter-Light;
 }
 .card {
   min-height: 200px;
@@ -91,4 +93,7 @@ a {
 }
 .card:hover {
   background-color: blueviolet;
+}
+.border {
+  border: 1px solid white;
 }
