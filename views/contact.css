@@ -1,5 +1,6 @@
-#background {
-  background-color: #183659;
+.font {
+  color: #212121;
+  font-family: "Open Sans";
 }
 .container {
   max-width: 750px;
@@ -16,20 +17,7 @@
 }
 h2 {
   text-align: center;
-  color: #D4AF37;
   padding-top: 60px;
   font-size: 85px;
-  font-family: AmericanTypewriter-Light;
-}
-span {
-  color: #D4AF37;
-  font-family: AmericanTypewriter-Light;
-}
-.btn:hover {
-  background-color: #D4AF37;
-}
-.btn {
-  color: #D4AF37;
-  border-color: #D4AF37;
-  width: 150px;
+  font-weight: 600;
 }

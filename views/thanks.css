@@ -1,0 +1,10 @@
+.font {
+  color: #212121;
+  font-family: "Open Sans";
+}
+#response {
+  text-align: center;
+  padding-top: 150px;
+  font-size: 85px;
+  font-weight: 600;
+}

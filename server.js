@@ -3,6 +3,9 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const profile = require('./profile')
 const fs = require('fs');
+require('dotenv').config();
+const Mailchimp = require('mailchimp-api-v3');
+const mailchimp = new Mailchimp(process.env.API_KEY);
 
 const app = express();
 const router = express.Router();
@@ -32,8 +35,7 @@ app.get('/contact', (req, res) => {
 })
 
 app.get('/thanks', (req, res) => {
-  console.log(req.body);
-  res.render('thanks', { contact: req.body });
+  res.render('thanks', { contact: req.body })
 })
 
 app.get('/resume', (req, res) => {
@@ -44,10 +46,25 @@ app.get('/resume', (req, res) => {
   })
 })
 
-//  POST
-app.post('/', (req, res) => {
-  res.send('POST request to homepage')
-})
+// POST
+app.post("/thanks", (req, res) => {
+  mailchimp.post('/lists/7162a6f04d/members', {
+    merge_fields: {
+      FNAME: (req.body.name).split(" ").slice(0, -1).join(" "),
+      LNAME: (req.body.name).split(" ").slice(0-1).join(" "),
+    },
+    email_address : req.body.email,
+    status : 'subscribed'
+  })
+  .then((response) => {
+    res.render('thanks', { 
+      contact: {
+        name: (req.body.name).split(" ").slice(0, -1).join(" "),
+        email: req.body.email,
+        messgae: req.body.message
+      }})
+  }).catch(err => res.status(400).send(err.message));
+});
 
 // GET Catch
 app.get('*', (req, res) => {

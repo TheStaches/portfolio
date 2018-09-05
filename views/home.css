@@ -1,99 +1,154 @@
-#background {
-  background-color: #183659;
-}
 .font {
-  color: #D4AF37;
-  font-family: AmericanTypewriter-Light;
+  color: #212121;
+  font-family: "Open Sans";
+}
+.border {
+  border: 1px solid black !important;
+}
+body {
+  position: relative;
 }
 #header {
   text-align: center;
   display: block;
-  height: 100vh;
+  height: 101vh;
   min-height: 700px;
+  position: relative;
+  background-image: url("./files/image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 #header h1 {
   font-size: 100px;
   font-weight: normal;
-  padding-top: 200px;
+  padding-top: 185px;
   margin-bottom: 0px;
+}
+#offset {
+  margin-left: 80px;
+  margin-top: -7px;
 }
 #header p {
   font-size:25px;
 }
 #header hr {
-  border-color: #D4AF37;
   max-width: 22%;
-  opacity: 0.5;
+  border: .5px solid black;
 }
 #header form {
   display: inline;
 }
-a {
-  fill: #D4AF37;
-  padding: 5px;
+.chevronDown {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  right: 50%;
 }
-#header .btn:hover {
+.chevronDown svg {
+  color: #212121;
+}
+/* #header .btn:hover {
   background-color: #D4AF37;
 }
 .btn {
   color: #D4AF37;
   border-color: #D4AF37;
-}
+} */
 #header .btn {
   width: 150px;
 }
-#skills {
-  height: 500px;
-  background-color: #0f263f;
+
+
+/* Skills */
+#skills .row {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#skills hr {
+  color: #212121;
+  max-width: 75%
+}
+.skillsSection {
+  display: inline-block;
+  width: 49%;
+}
+#skills .col-6 {
+  display: inline-block;
+  width: 49%;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.aboutHeader {
+  text-align: left;
+  margin-bottom: 25px;
+}
+.skillsHeader {
   text-align: center;
-}
-#skills h2 {
-  font-weight: normal;
-  text-align: left;
-  font-size: 30px;
-}
-#about {
-  text-align: left;
+  margin-bottom: 25px;
 }
 #skills p {
   font-weight: normal;
   text-align: left;
 }
+#skills .aboutIcons {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 15px;
+}
+#skills a {
+  fill: #212121;
+}
+
+/* Projects */
 #projects {
-  height: 750px;
+  height: 1000px;
 }
 .projectTitle{
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom:50px;
   text-align: center;
+  font-size: 50px;
 }
 .projectHeader{
-  font-weight: normal;
+  font-weight: 600;
   padding:5px;
   font-size: 40px;
+  color: #212121;
+}
+.projectSub {
+  font-weight: 400;
+  color: #212121;
+}
+.projectHeader p {
+  font-weight: 400;
+  color: #4a4a4a;
 }
 .projectRow {
   margin-bottom: 6%;
+  border-radius: 5px;
 }
-#projects img {
-  padding: 40px;
+.projectImage {
+  width: 400px;
+  height: 225px;
+  margin: 25px;
+}
+.projectButtons {
+  position: absolute;
+  bottom: 20px;
 }
 #footer {
   background-color: #0f263f;
   min-height: 100px;
+  position:absolute;
+  bottom:0;
+  width: 100%;
 }
 #footer p {
   text-align: center;
+  color: white;
   font-size: 20px;
   padding-top: 30px;
-}
-.card {
-  min-height: 200px;
-  margin: 15px 5px 5px 5px;
-}
-.card:hover {
-  background-color: blueviolet;
-}
-.border {
-  border: 1px solid white;
 }
