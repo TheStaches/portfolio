@@ -9,6 +9,7 @@ const mailchimp = new Mailchimp(process.env.API_KEY);
 
 const app = express();
 const router = express.Router();
+const PORT = process.env.PORT || 8080;
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
@@ -72,6 +73,4 @@ app.get('*', (req, res) => {
 })
 
 
-app.listen(8080, () => {
-  console.log('listening at http://localhost:8080');
-});
+app.listen(PORT, () => {console.log(`listening at http://localhost:${PORT}`);});
