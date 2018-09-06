@@ -60,7 +60,7 @@ app.post("/thanks", (req, res) => {
   .then((response) => {
     res.render('thanks', { 
       contact: {
-        name: (req.body.name).split(" ").slice(0, -1).join(" "),
+        name: (req.body.name.split(' ').length !== 1 ) ? (req.body.name).split(" ").slice(0, -1).join(" ") : req.body.name.split(' '),
         email: req.body.email,
         messgae: req.body.message
       }})
