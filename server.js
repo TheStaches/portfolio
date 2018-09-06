@@ -40,8 +40,8 @@ app.get('/thanks', (req, res) => {
 })
 
 app.get('/resume', (req, res) => {
-  let resume = 'views/files/resume'
-  fs.readFile(__dirname + resume, (err,pdf) => {
+  let resume = './views/files/resume.pdf'
+  fs.readFile(resume, (err,pdf) => {
     res.contentType("application/pdf");
     res.send(pdf);
   })
