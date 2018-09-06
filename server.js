@@ -51,8 +51,8 @@ app.get('/resume', (req, res) => {
 app.post("/thanks", (req, res) => {
   mailchimp.post('/lists/7162a6f04d/members', {
     merge_fields: {
-      FNAME: (req.body.name).split(" ").slice(0, -1).join(" "),
-      LNAME: (req.body.name).split(" ").slice(0-1).join(" "),
+      FNAME: ( (req.body.name.split(' ').length !== 1 ) ? (req.body.name).split(" ").slice(0, -1).join(" ") : req.body.name),
+      LNAME: ( (req.body.name.split(' ').length !== 1 ) ? (req.body.name).split(" ").slice(-1).join(" ") : ""),
     },
     email_address : req.body.email,
     status : 'subscribed'
